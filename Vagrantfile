@@ -8,6 +8,7 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $script
+  config.vm.synced_folder ".", "/vagrant"
 end
 
 Vagrant::Config.run do |config|
