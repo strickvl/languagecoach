@@ -1,0 +1,15 @@
+<html>
+  <head>
+  	{% if title %}
+    <title>{{ title }} - languagecoach.io</title>
+    {% else %}
+    <title>LanguageCoach.io</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>Language Coach Task:</h1>
+    <h2>{{task_title}}</h2>
+    <br>
+    {{task_subtitle}}
+  </body>
+</html>
