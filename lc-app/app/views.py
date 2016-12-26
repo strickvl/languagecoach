@@ -9,8 +9,29 @@ fivemintasks = [
 	{'title': "Describe your room", 'subtitle': "Describe the room in which you're sitting in the language you're learning out loud. Note down any words that you're missing, but keep trying to describe what's around you even without the missing words."}]
 
 @app.route('/')
-@app.route('/index')
-def index():
-	task_title=(random.choice(fivemintasks))['title']
-	task_subtitle=(random.choice(fivemintasks))['subtitle']
-	return render_template('index.html',title='Five Minute Task', task_title=task_title, task_subtitle=task_subtitle)
+@app.route('/howlong')
+def howmuchtime():
+	return render_template('howlong.html',title="How long?")
+
+@app.route('/fivemintask')
+def fivemintask():
+	random_task = random.choice(fivemintasks)
+	task_title=random_task['title']
+	task_subtitle=random_task['subtitle']
+	return render_template('fivemintask.html',title='Five Minute Task', task_title=task_title, task_subtitle=task_subtitle)
+
+@app.route('/tenmintask')
+def tenmintask():
+	return render_template('tenmintask.html',title="Ten Minute Task")
+
+@app.route('/twentymintask')
+def twentymintask():
+	return render_template('twentymintask.html',title="Twenty Minute Task")
+
+@app.route('/thirtymintask')
+def thirtymintask():
+	return render_template('thirtymintask.html',title="Thirty Minute Task")
+
+@app.route('/sixtymintask')
+def sixtymintask():
+	return render_template('sixtymintask.html',title="Sixty Minute Task")
