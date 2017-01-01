@@ -1,7 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2 align="center">{{task_title}}</h2>
-    <div align="center">{{task_subtitle}}</div>
-    <hr>
-    <div align="center">Set a timer and get working!</div>
+    <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="/coachbot">CoachBot</a></li>
+            <li role="presentation"><a href="/coaching">Coaching</a></li>
+            <li role="presentation"><a href="/podcasts">Podcasts</a></li>
+            <li role="presentation"><a href="/about">About</a></li>
+          </ul>
+        </nav>
+        <a href="index.html"><img class="tinylogo" src="../static/logo.png" alt="language coach logo"></a>
+      </div>
+
+      <div align="center"><button type="button" class="btn btn-primary btn-block btn-lg" disabled>10 Minute Session</button></div>
+      <h2 align="center">{{task_title}}</h2>
+      <div align="left">{{task_subtitle}}</div>
+      <hr>
+      <div align="center">Set a timer and get working!</div>
+      <br>
+        <div align="center"><a href="/tenmintask"><button type="button" class="btn btn-default btn">Show me a different task</button></a>  <a href="/coachbot"><button type="button" class="btn btn-default btn">Start over</button></a></div><br>
+      <div></div>
+      
+      <footer class="footer">
+        <p>&copy; 2017 Alex Strick van Linschoten // <a href="https://incrementalelephant.org/contact/">Contact</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/ie10-viewport-bug-workaround.js"></script>
+  </body>
 {% endblock %}
