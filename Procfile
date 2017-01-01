@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath lc-app app:app
