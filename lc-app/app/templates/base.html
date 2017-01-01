@@ -20,3 +20,65 @@
     {% block content %}{% endblock %}
   </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../static/favicon.ico">
+
+    {% if title %}
+    <title>{{ title }} - languagecoach.io</title>
+    {% else %}
+    <title>LanguageCoach.io - Alex Strick</title>
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../static/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="studybot.html">StudyBot</a></li>
+            <li role="presentation"><a href="coaching.html">Coaching</a></li>
+            <li role="presentation"><a href="podcasts.html">Podcasts</a></li>
+            <li role="presentation"><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+        <a href="index.html"><img class="tinylogo" src="../static/logo.png" alt="language coach logo"></a>
+      </div>
+
+        {% block content %}{% endblock %}
+      
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2017 Alex Strick van Linschoten // <a href="https://incrementalelephant.org/contact/">Contact</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
