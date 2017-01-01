@@ -9,9 +9,30 @@ fivemintasks = [
 	{'title': "Describe your room", 'subtitle': "Describe the room in which you're sitting in the language you're learning out loud. Note down any words that you're missing, but keep trying to describe what's around you even without the missing words."}]
 
 @app.route('/')
+@app.route('/index')
+def index():
+	return render_template('index.html',title="Home")
+
+@app.route('/')
 @app.route('/howlong')
 def howmuchtime():
 	return render_template('howlong.html',title="How long?")
+
+@app.route('/about')
+def about():
+	return render_template('about.html',title="About")
+
+@app.route('/coachbot')
+def coachbot():
+	return render_template('coachbot.html',title="CoachBot")
+
+@app.route('/coaching')
+def coaching():
+	return render_template('coaching.html',title="Coaching")
+
+@app.route('/podcasts')
+def podcasts():
+	return render_template('podcasts.html',title="Podcasts")
 
 @app.route('/fivemintask')
 def fivemintask():

@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
+
+<body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/coachbot">CoachBot</a></li>
+            <li role="presentation"><a href="/coaching">Coaching</a></li>
+            <li role="presentation"><a href="/podcasts">Podcasts</a></li>
+            <li role="presentation"><a href="/about">About</a></li>
+          </ul>
+        </nav>
+        <a href="index.html"><img class="tinylogo" src="../static/logo.png" alt="language coach logo"></a>
+      </div>
+
+        <div class="jumbotron">
         <h1>Learn Languages</h1>
         <h2>with Alex Strick van Linschoten</h2><br>
         <p class="lead">I offer support for self-taught language learners. This is increasingly the way that people learn new languages, enabled by the amazing riches and opportunities that the internet brings.</p><br>
@@ -19,4 +35,18 @@
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
         </div>
+      
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2017 Alex Strick van Linschoten // <a href="https://incrementalelephant.org/contact/">Contact</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/ie10-viewport-bug-workaround.js"></script>
+  </body>
+   
 {% endblock %}
