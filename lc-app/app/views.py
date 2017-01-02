@@ -33,11 +33,6 @@ for row in reader:
 def index():
 	return render_template('index.html',title="Home")
 
-@app.route('/')
-@app.route('/howlong')
-def howmuchtime():
-	return render_template('howlong.html',title="How long?")
-
 @app.route('/about')
 def about():
 	return render_template('about.html',title="About")
@@ -53,6 +48,10 @@ def masterarabic():
 @app.route('/coaching')
 def coaching():
 	return render_template('coaching.html',title="Coaching")
+
+@app.route('/howmuchtime')
+def howmuchtime():
+	return render_template('cb-howmuchtime.html',title="CoachBot - How much time do you have to study?")
 
 @app.route('/podcasts')
 def podcasts():

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <body>
+
+<body>
     <div class="container">
       <div class="header clearfix">
         <nav>
@@ -14,17 +15,22 @@
           </ul>
         </nav>
         <a href="index.html"><img class="tinylogo" src="../static/logo.png" alt="language coach logo"></a>
-      </div>
-
-      <div align="center"><button type="button" class="btn btn-info btn-block btn-lg" disabled>5 Minute Session</button></div>
-      <h2 align="center">{{task_title}}</h2>
-      <div align="left">{{task_subtitle}}</div>
-      <hr>
-      <div align="center">Set a timer and get working!</div>
-      <br>
-        <div align="center"><a href="/fivemintask"><button type="button" class="btn btn-default btn">Show me a different task</button></a>  <a href="/coachbot"><button type="button" class="btn btn-default btn">Start over</button></a></div><br>
-      <div></div>
       
+      <div>
+          <h2 align="center">How much time do you have?</h2>
+            <br>
+            <div>
+            <div align="center">
+          <a href="/fivemintask"><button type="button" class="btn btn-info">5 mins</button></a>
+          <a href="/tenmintask"><button type="button" class="btn btn-primary">10 mins</button></a>
+          <a href="/twentymintask"><button type="button" class="btn btn-success">20 mins</button></a>
+          <a href="/thirtymintask"><button type="button" class="btn btn-warning">30 mins</button></a>
+          <a href="/sixtymintask"><button type="button" class="btn btn-danger">60 mins</button></a>
+          <br><br><br>
+          </div>
+          </div>
+        </div>
+          
       <footer class="footer">
         <p>&copy; 2017 Alex Strick van Linschoten // <a href="https://incrementalelephant.org/contact/">Contact</a></p>
       </footer>
@@ -35,4 +41,5 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../static/ie10-viewport-bug-workaround.js"></script>
   </body>
+
 {% endblock %}
