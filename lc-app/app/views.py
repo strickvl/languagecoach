@@ -46,6 +46,10 @@ def about():
 def coachbot():
 	return render_template('coachbot.html',title="CoachBot")
 
+@app.route('/masterarabic')
+def masterarabic():
+	return render_template('masterarabic.html',title="Master Arabic")
+
 @app.route('/coaching')
 def coaching():
 	return render_template('coaching.html',title="Coaching")
