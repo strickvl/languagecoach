@@ -53,9 +53,9 @@ def coaching():
 def howmuchtime():
 	return render_template('cb-howmuchtime.html',title="CoachBot - How much time do you have to study?")
 
-@app.route('/podcasts')
-def podcasts():
-	return render_template('podcasts.html',title="Podcasts")
+@app.route('/podcast')
+def podcast():
+	return render_template('podcast.html',title="Podcast")
 
 @app.route('/fivemintask')
 def fivemintask():
