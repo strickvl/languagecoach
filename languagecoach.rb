@@ -28,6 +28,6 @@ get "/podcast" do
   erb :podcast, layout: :layout
 end
 
-get "about" do
+get "/about" do
   erb :about, layout: :layout
 end
