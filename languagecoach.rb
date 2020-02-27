@@ -36,3 +36,33 @@ get "/about" do
   @title = "About"
   erb :about, layout: :layout
 end
+
+get "/howmuchtime" do
+  @title = "Coachbot - How much time do you have?"
+  erb :howmuchtime, layout: :layout
+end
+
+get "/fivemintask" do
+  @title = "Five Minute Task"
+  erb :fivemintask, layout: :layout
+end
+
+get "/tenmintask" do
+  @title = "Ten Minute Task"
+  erb :tenmintask, layout: :layout
+end
+
+get "/twentymintask" do
+  @title = "Twenty Minute Task"
+  erb :twentymintask, layout: :layout
+end
+
+get "/thirtymintask" do
+  @title = "Thirty Minute Task"
+  erb :thirtymintask, layout: :layout
+end
+
+get "/sixtymintask" do
+  @title = "Sixty Minute Task"
+  erb :sixtymintask, layout: :layout
+end
