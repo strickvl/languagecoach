@@ -33,6 +33,7 @@ DEPENDENCIES
   erubis
   minitest
   puma
+  rack (>= 1.6.12)
   rack-test
   sinatra (~> 1.4.7)
   sinatra-contrib
