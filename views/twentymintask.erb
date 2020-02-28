@@ -13,13 +13,14 @@
     <a href="/"><img class="tinylogo" src="logo.png" alt="language coach logo"></a>
   </div>
 
-  <div align="center"><button type="button" class="btn btn-success btn-block btn-lg" disabled>20 Minute Session</button></div>
-  <h2 align="center">{{task_title}}</h2>
-  <div align="left">{{task_subtitle}}</div>
+  <div align="center"><button type="button" class="btn btn-info
+  btn-block btn-lg" disabled>20 Minute Session</button></div>
+  <h2 align="center"><%= @task_name %></h2>
+  <div align="left"><%= @task_extra_information %></div>
   <hr>
   <div align="center">Set a timer and get working!</div>
   <br>
-  <div align="center"><a href="/twentymintask"><button type="button" class="btn btn-default btn">Show me a different task</button></a>  <a href="/coachbot"><button type="button" class="btn btn-default btn">Start over</button></a></div><br>
+  <div align="center"><a href="/fivemintask"><button type="button" class="btn btn-default btn">Show me a different task</button></a>  <a href="/coachbot"><button type="button" class="btn btn-default btn">Start over</button></a></div><br>
   <div></div>
 
   <footer class="footer">
