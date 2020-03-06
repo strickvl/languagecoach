@@ -44,45 +44,48 @@ get "/howmuchtime" do
 end
 
 get "/fivemintask" do
-  task = CSV.read("./public/tasks5mins.csv").shuffle.first
-  @task_name = task[0]
-  @task_extra_information = task[1]
+  @task_length = '5'
   @title = "Five Minute Task"
-  erb :fivemintask, layout: :layout
+
+  show_task
 end
 
 get "/tenmintask" do
-  task = CSV.read("./public/tasks10mins.csv").shuffle.first
-  @task_name = task[0]
-  @task_extra_information = task[1]
-
+  @task_length = '10'
   @title = "Ten Minute Task"
-  erb :tenmintask, layout: :layout
+
+  show_task
 end
 
 get "/twentymintask" do
-  task = CSV.read("./public/tasks20mins.csv").shuffle.first
-  @task_name = task[0]
-  @task_extra_information = task[1]
-
+  @task_length = '20'
   @title = "Twenty Minute Task"
-  erb :twentymintask, layout: :layout
+
+  show_task
 end
 
 get "/thirtymintask" do
-  task = CSV.read("./public/tasks30mins.csv").shuffle.first
-  @task_name = task[0]
-  @task_extra_information = task[1]
-
+  @task_length = '30'
   @title = "Thirty Minute Task"
-  erb :thirtymintask, layout: :layout
+
+  show_task
 end
 
 get "/sixtymintask" do
-  task = CSV.read("./public/tasks60mins.csv").shuffle.first
+  @task_length = '60'
+  @title = "Sixty Minute Task"
+
+  show_task
+end
+
+def show_task
+  filename = "./public/tasks" + @task_length + "mins.csv"
+  task = CSV.read(filename).shuffle.first
   @task_name = task[0]
   @task_extra_information = task[1]
 
-  @title = "Sixty Minute Task"
-  erb :sixtymintask, layout: :layout
+  @refresh_task_path = %w(fivemintask tenmintask twentymintask
+                        thirtymintask sixtymintask).shuffle.first
+
+  erb :task, layout: :layout
 end
