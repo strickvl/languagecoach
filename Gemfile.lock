@@ -4,29 +4,29 @@ GEM
     erubis (2.7.0)
     minitest (5.14.0)
     multi_json (1.14.1)
-    mustermann (1.1.2)
+    mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
     puma (4.3.12)
       nio4r (~> 2.0)
     rack (2.2.6.3)
-    rack-protection (2.2.0)
+    rack-protection (2.2.3)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     ruby2_keywords (0.0.5)
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
+    sinatra (2.2.3)
+      mustermann (~> 2.0)
       rack (~> 2.2)
-      rack-protection (= 2.2.0)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
-    sinatra-contrib (2.2.0)
+    sinatra-contrib (2.2.3)
       multi_json
-      mustermann (~> 1.0)
-      rack-protection (= 2.2.0)
-      sinatra (= 2.2.0)
+      mustermann (~> 2.0)
+      rack-protection (= 2.2.3)
+      sinatra (= 2.2.3)
       tilt (~> 2.0)
-    tilt (2.0.11)
+    tilt (2.1.0)
 
 PLATFORMS
   ruby
@@ -38,7 +38,7 @@ DEPENDENCIES
   rack (>= 1.6.12)
   rack-protection (>= 1.5.5)
   rack-test
-  sinatra (~> 2.2.0)
+  sinatra (~> 2.2.3)
   sinatra-contrib
 
 RUBY VERSION
