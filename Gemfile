@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
-ruby "2.4.4"
+ruby "3.2.2"
 
-gem "sinatra", "~>2.2.3"
+gem "sinatra"
 gem "sinatra-contrib"
 gem "erubis"
-gem "rack", ">= 1.6.12"
-gem "rack-protection", ">= 1.5.5"
+gem "rack"
+gem "rack-protection"
 gem "rack-test"
 gem "minitest"
 
